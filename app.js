@@ -8,9 +8,10 @@ router.get("/", function(req, res) {
     //__dirname : It will resolve to your project folder.
 });
 
+app.use("/", router);
 //add the router
 app.use(express.static(path.join(__dirname, "public")));
-app.use("/", router);
-app.listen(process.env.port || 80);
+
+app.listen(80);
 
 console.log("Running at Port 80");
