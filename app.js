@@ -11,6 +11,6 @@ router.get("/", function(req, res) {
 //add the router
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/", router);
-app.listen(80);
+app.listen(process.env.port || 80);
 
 console.log("Running at Port 80");
