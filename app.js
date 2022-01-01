@@ -12,6 +12,6 @@ app.use("/", router);
 //add the router
 app.use(express.static(path.join(__dirname, "public")));
 
-app.listen(5000);
+app.listen(process.env.PORT || 5000);
 
-console.log("Running at Port 80");
+console.log("Running at Port 5000");
